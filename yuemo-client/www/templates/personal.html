@@ -1,0 +1,58 @@
+<ion-view hide-nav-bar="true" >
+  <div class="bar bar-header bar-positive " >
+    <button class="button button-clear">我的</button>
+    <h1 class="title"></h1>
+    <button class="button button-clear" ng-click="run()" ui-sref="tab.setting" >设置</button>
+  </div>
+<ion-content style="margin-top: 42px">
+
+  <ion-list>
+    <a style="height: 80px" class="item positive-bg item-icon-left item-icon-right" ui-sref="tab.personalinfo" ng-click="run()">
+      <span class="icon personal">
+        <img src="http://ovre0qmr5.bkt.clouddn.com/21a7b687514832c5a6df7e350e00374b.jpg" alt="">
+      </span>
+      <span style="margin-left:30px;padding-top: 5px">
+       <span>{{user}}</span>
+      <br>
+
+        <span style="margin-left:30px; margin-top: 10px">已认证</span>
+      </span>
+     <span class="icon ion-chevron-right" style="color: white"></span>
+    </a>
+    <!--<a class="item" ui-sref="tab.login">登录-->
+      <!--<a class="item" ui-sref="tab.register">注册</a>-->
+    <a class="item item-icon-left item-icon-right" ui-sref="tab.pay">
+      <i class="icon ion-email"></i>
+      钱包
+      <span class="icon ion-chevron-right" style="color: #eeeeee"></span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" href="#">
+      <i class="icon ion-email"></i>
+       信用积分
+      <span class="icon ion-chevron-right" style="color: #eeeeee"></span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" href="#">
+      <i class="icon ion-chatbubble-working"></i>
+      我的优惠券
+      <span class="icon ion-chevron-right" style="color: #eeeeee"></span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" href="#">
+      <i class="icon ion-mic-a"></i>
+     我的标签
+      <span class="icon ion-chevron-right" style="color: #eeeeee"></span>
+    </a>
+
+    <a class="item item-icon-left item-icon-right" ui-sref="tab.about">
+      <i class="icon ion-social-tux"></i>
+      关于我们
+      <span class="icon ion-chevron-right" style="color: #eeeeee"></span>
+    </a>
+
+
+
+  </ion-list>
+</ion-content>
+</ion-view>

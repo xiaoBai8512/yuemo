@@ -1,0 +1,27 @@
+<ion-view  view-title="{{username}}"  >
+  <ion-nav-bar class="balanced-bg">
+    <ion-nav-buttons  >
+      <button style="color: white" class=" button button-clear" ng-click="goback()">
+        <span class="icon ion-chevron-left " > back</span>
+    </button>
+    </ion-nav-buttons>
+
+  </ion-nav-bar>
+  <ion-content >
+    <ion-list>
+    <div class="item"   ng-repeat=" x in data ">
+    <span ng-class="{'right':x.isReceive}" >{{x.message}}</span>
+    </div>
+
+
+
+    </ion-list>
+
+
+    <div class="inputview">
+      <input type="text" ng-model="info.message" ><button id="button" ng-click="send()">发送</button>
+
+    </div>
+
+  </ion-content>
+</ion-view>

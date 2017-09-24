@@ -1,0 +1,37 @@
+<ion-view title="登录" hide-nav-bar="true">
+  <div class="bar bar-header bar-positive " >
+    <h1 class="title">登录</h1>
+    <button class="button " ng-click="" ui-sref="register">注册</button>
+  </div>
+
+  <ion-content ng-controller="logincontroller">
+    <div style="width: 60%; margin: 0 auto;
+padding-top: 84px"  class="list list-inset " >
+      <div class="list ">
+        <label class="item item-input">
+          <i class="icon ion-person placeholder-icon"></i>
+          <input ng-model="info.username" type="text" placeholder="用户名">
+        </label>
+      </div>
+      <div class="space"></div>
+      <div class="list ">
+        <label class="item item-input">
+          <i class="icon ion-ios-eye placeholder-icon "></i>
+          <input ng-model="info.password" type="password" placeholder="密码">
+        </label>
+      </div>
+      <button ui-sref="findpassword" class="button right button-assertive button-clear">忘记密码?</button>
+
+      <button ng-click="login()" class="button button-positive full-image">
+        登录
+      </button>
+      <div class="space"></div>
+      <button class="button button-balanced button-block button-clear">第三方登录</button>
+      <div class="text-center">
+        <img class="responsive-img" src="img/timg.jpg" alt="">
+
+        <img class="responsive-img" src="img/timg2.jpg" alt="">
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

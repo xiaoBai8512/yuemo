@@ -1,0 +1,15 @@
+<ion-view view-title="商城" class="assertive">
+  <ion-nav-bar class="balanced-bg  bar-assertive  ">
+  </ion-nav-bar>
+  <ion-content>
+
+    <ion-list>
+      <ion-item ng-repeat="item in goodList" class="good" ng-click="goodsDetail(item)">
+        <img ng-src="{{item.url}}" alt="">
+        <p>￥ {{item.price}}</p>
+        <span>{{item.goodname}}</span>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

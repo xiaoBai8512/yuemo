@@ -1,0 +1,264 @@
+.platform-android .action-sheet-backdrop {
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.platform-android .action-sheet-backdrop.active {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.platform-android .action-sheet-wrapper {
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+  -webkit-transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+  transition: all cubic-bezier(0.36, 0.66, 0.04, 1) 500ms;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.platform-android .action-sheet-up {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.platform-android .action-sheet {
+  margin-left: 8px;
+  margin-right: 8px;
+  width: auto;
+  z-index: 11;
+  overflow: hidden;
+}
+
+.platform-android .action-sheet .button {
+  display: block;
+  padding: 1px;
+  width: 100%;
+  border-radius: 0;
+  border-color: #d1d3d6;
+  background-color: transparent;
+  color: #007aff;
+  font-size: 21px;
+}
+
+.platform-android .action-sheet .button:hover {
+  color: #007aff;
+}
+
+.platform-android .action-sheet .button.destructive {
+  color: #ff3b30;
+}
+
+.platform-android .action-sheet .button.destructive:hover {
+  color: #ff3b30;
+}
+
+.platform-android .action-sheet .button.active, .platform-android .action-sheet .button.activated {
+  box-shadow: none;
+  border-color: #d1d3d6;
+  color: #007aff;
+  background: #e4e5e7;
+}
+
+.platform-android .action-sheet-has-icons .icon {
+  position: absolute;
+  left: 16px;
+}
+
+.platform-android .action-sheet-title {
+  padding: 16px;
+  color: #8f8f8f;
+  text-align: center;
+  font-size: 13px;
+}
+
+.platform-android .action-sheet-group {
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.platform-android .action-sheet-group .button {
+  border-width: 1px 0px 0px 0px;
+}
+
+.platform-android .action-sheet-group .button:first-child:last-child {
+  border-width: 0;
+}
+
+.platform-android .action-sheet-options {
+  background: #f1f2f3;
+}
+
+.platform-android .action-sheet-cancel .button {
+  font-weight: 500;
+}
+
+.platform-android .action-sheet-open {
+  pointer-events: none;
+}
+
+.platform-android .action-sheet-open.modal-open .modal {
+  pointer-events: none;
+}
+
+.platform-android .action-sheet-open .action-sheet-backdrop {
+  pointer-events: auto;
+}
+
+.platform-android .action-sheet .action-sheet-title, .platform-android .action-sheet .button {
+  text-align: center;
+}
+
+.platform-android .action-sheet-cancel {
+  display: block;
+}
+/**
+/上面是解决$ionicActionSheet样式问题
+ */
+.space{
+  display: block;
+  height: 20px;
+  width: 100%;
+}
+.right{
+  float: right;
+}
+.responsive-img{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  margin: 10px 5px;
+
+}
+.white{
+
+  color: #ff9a89;!important;
+}
+
+.personal img{
+  display: inline-block;
+  width: 60px;
+  height:60px;
+  border-radius: 50%;
+  border:1px solid white;
+}
+.center{
+  text-align: center;
+}
+.map-content{
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  background: white;
+  left: 0;
+}
+.inputview{
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  padding:5px 0;
+
+}
+.inputview>input{
+  flex: 5;
+  height: 44px;
+  box-sizing: border-box;
+  border: 4px solid #ff4b18;
+}
+#button{
+ flex: 1;
+  border: none;
+  outline: none;
+  height: 44px;
+  background: #ff4b18;
+  color: white;
+}
+
+/*首页轮播图/*/
+.swiper-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.swiper-container .width {
+  width: 100%;
+  height: 400px;
+}
+.swiper-slide{
+  position: relative;
+}
+.swiper-slide .title{
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 50px;
+  color: #fff105;
+}
+.swiper-slide .content{
+
+  position: absolute;
+  bottom: 20%;
+  left: 10%;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bg{
+  background:url("../img/bg.jpg");
+}
+.card{
+  height: 40%;
+
+}
+.swiper-slide .card{
+  height: 150px;
+}
+
+.card .item{
+  z-index:0;
+}
+
+.good{
+  width: 50%;
+  height: 50%;
+  border: 2px solid #ff4400;
+  box-sizing: border-box;
+  float: left;
+}
+.good img{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  width: 100%;
+  height: 100%;
+}
+.detailImg{
+  width: 100%;
+  height: 60%;
+}
+.detailPrice{
+  color: #ff4400;
+  font-size: 3rem;
+  font-weight:bold ;
+  margin: 1.5rem;
+}
+.detailGoodName{
+  font-weight: bold;
+  font-size: 1.5rem;
+}

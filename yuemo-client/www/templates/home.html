@@ -1,0 +1,105 @@
+<ion-view view-title="发现" hide-nav-bar="true">
+
+  <div  class="bar bar-header bar-balanced " >
+
+    <h1 class="title">发现</h1>
+    <button class="button button-energized" ng-click="openModal()" >发布</button>
+
+  </div>
+
+  <ion-content style="margin-top: 44px;">
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="list card" ng-repeat="item in xiaobai">
+
+      <div class="item item-avatar">
+        <img ng-src="{{item.headUrl}}">
+        <h2>{{item.userName}}</h2>
+        <p>{{toTime(item.time)}}</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=865429893,2009400724&fm=27&gp=0.jpg">
+        <p>
+          {{item.artical}}
+        </p>
+        <p>
+          <a href="" class="subdued">1 Like</a>
+          <a href="" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+    </div>
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=4153394811,153441787&fm=27&gp=0.jpg">
+        <h2>Marty McFly</h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=3133984940,1163649397&fm=27&gp=0.jpg">
+        <p ng-bind="myText.state">
+          This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+          the content is from a card-body consisting of an image and paragraph text. The footer
+          consists of tabs, icons aligned left, within the card-footer.
+        </p>
+        <p>
+          <a href="#" class="subdued">1 Like</a>
+          <a href="#" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=86169535,2819750143&fm=27&gp=0.jpg">
+        <h2>Marty McFly</h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=3988358528,1604841800&fm=27&gp=0.jpg">
+        <p>
+          This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+          the content is from a card-body consisting of an image and paragraph text. The footer
+          consists of tabs, icons aligned left, within the card-footer.
+        </p>
+        <p>
+          <a href="" class="subdued">1 Like</a>
+          <a href="" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+    </div>
+
+    <div class="list card">
+
+      <div class="item item-avatar">
+        <img src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1275958651,1481646963&fm=27&gp=0.jpg">
+        <h2>Marty McFly</h2>
+        <p>November 05, 1955</p>
+      </div>
+
+      <div class="item item-body">
+        <img class="full-image" src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=865429893,2009400724&fm=27&gp=0.jpg">
+        <p>
+          This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+          the content is from a card-body consisting of an image and paragraph text. The footer
+          consists of tabs, icons aligned left, within the card-footer.
+        </p>
+        <p>
+          <a href="" class="subdued">1 Like</a>
+          <a href="" class="subdued">5 Comments</a>
+        </p>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

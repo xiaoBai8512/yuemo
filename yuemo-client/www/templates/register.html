@@ -1,0 +1,31 @@
+<ion-view view-title="注册"  >
+  <!--<div ng-controller="registercontroller">-->
+  <ion-nav-bar style="margin-bottom: 50px" class="bar bar-header bar-positive " >
+    <ion-nav-buttons>
+      <button class="button button-clear" ng-click="gologin()" ><span class="icon ion-chevron-left"></span></button>
+    </ion-nav-buttons>
+    <h1 class="title">注册</h1>
+  </ion-nav-bar>
+  <ion-content style="margin-top: 44px" >
+    <div class="list list-inset "   >
+      <label class="item item-icon-left ">
+        <span class="icon ion-person "></span>
+        <input ng-model="info.username" type="text" placeholder="用户名">
+      </label>
+      <label class="item item-icon-left">
+        <span class="icon ion-ios-telephone "></span>
+        <input ng-model="info.phone" type="text" placeholder="手机号" >
+      </label>
+      <label class="item item-icon-left">
+        <span class="icon ion-ios-eye "></span>
+        <input ng-model="info.password" type="password" placeholder="密码">
+      </label>
+      <div class="space"></div>
+      {{username}}
+      <button ng-click="toRegister(username)" class="button button-positive full-image">
+        注册
+      </button>
+    </div>
+  </ion-content>
+  <!--</div>-->
+</ion-view>
