@@ -143,7 +143,7 @@ angular.module('starter.controllers', [])
 
   })
 
-  .controller("homecontroller",function ($scope,$state,$rootScope,$http,$ionicLoading,$ionicPopup,$ionicActionSheet,$httpParamSerializerJQLike,$ionicModal,$timeout){
+  .controller("homecontroller",function ($scope,$state,$rootScope,$http,$ionicLoading,$ionicPopup,$ionicActionSheet,$httpParamSerializerJQLike,$ionicModal,$timeout,Show){
     $scope.infoModal={};
     $ionicModal.fromTemplateUrl('templates/STspace/message.html', {
       scope: $scope,
@@ -186,10 +186,17 @@ angular.module('starter.controllers', [])
     };
 
     $scope.toUpdate = function () {
+      if(!$scope.infoModal.text){
+        Show.showAlertDelay("发布内容不能为空",1);
+        return;
+      }
       $http.get("http://47.94.6.17:3000/news/publish/?id="+localStorage.getItem('userid')+"&username="+localStorage.getItem('user')+"&artical="+$scope.infoModal.text).then(function (result) {
         console.log(result);
+        Show.showAlertDelay(result.data.message,1);
+        $scope.closeModal();
       }).catch(function (error) {
         console.log(error);
+        Show.showAlertDelay(error.data.message,1);
       });
     };
     $scope.show = function() {
